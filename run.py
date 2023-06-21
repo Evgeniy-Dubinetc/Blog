@@ -1,8 +1,24 @@
-from flaskblogpost import create_app, db
+# from flaskblogpost import create_app, db
+#
+# app = create_app()
+#
+# if __name__ == '__main__':
+#     with app.app_context():
+#         db.create_all()
+#         app.run(debug=False)
 
-app = create_app()
+from flask import Flask
+
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return 'Hello World'
+
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-        app.run(debug=False)
+    app.run(debug=False)
+
+
