@@ -1,8 +1,12 @@
-from flaskblogpost import create_app, db
+# from flaskblogpost import create_app, db
+from flask import Flask
 
-app = create_app()
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Hello from index"
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-        app.run(debug=False)
+    app.run()
