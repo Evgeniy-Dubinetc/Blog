@@ -21,7 +21,3 @@ def index():
 if __name__ == '__main__':
     app.run(debug=False)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 96b4c28 (deploy return)
